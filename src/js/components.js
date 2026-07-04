@@ -121,7 +121,7 @@
             <li><a href="${root}#services">Custom Chatbots</a></li>
             <li><a href="${root}#services">Web Platforms</a></li>
             <li><a href="${root}#services">E-Commerce</a></li>
-            <li><a href="${root}#services">Cloud Engineering</a></li>
+            <li><a href="${root}#services">Digital Marketing</a></li>
           </ul>
         </div>
 

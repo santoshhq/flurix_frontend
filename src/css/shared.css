@@ -200,9 +200,24 @@
   .fl-nav-links, .fl-nav-cta { display: none; }
   .fl-hamburger { display: flex; }
   .fl-footer-inner { grid-template-columns: 1fr 1fr; gap: 32px; }
+  /* Prevent dropdown from going off-screen */
+  .fl-dropdown-menu { width: 320px; grid-template-columns: 1fr; }
+}
+@media (max-width: 768px) {
+  /* Ensure mobile nav is always on top */
+  .fl-mobile-nav { z-index: 9990; }
+  /* Footer: two-column layout */
+  .fl-footer-inner { grid-template-columns: 1fr 1fr; gap: 28px; padding: 48px 20px 32px; }
 }
 @media (max-width: 560px) {
-  .fl-nav-inner { padding: 0 20px; }
-  .fl-footer-inner { grid-template-columns: 1fr; padding: 48px 20px 32px; }
-  .fl-footer-bottom { padding: 16px 20px; }
+  .fl-nav-inner { padding: 0 16px; }
+  .fl-nav-logo img { height: 38px; }
+  .fl-footer-inner { grid-template-columns: 1fr; padding: 40px 16px 28px; }
+  .fl-footer-bottom { padding: 16px; flex-direction: column; text-align: center; }
+  /* Mobile nav links: slightly smaller on very small screens */
+  .fl-mobile-nav a { font-size: 1.2rem; }
+}
+@media (max-width: 360px) {
+  .fl-nav-inner { padding: 0 12px; }
+  .fl-nav-logo img { height: 34px; }
 }

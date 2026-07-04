@@ -25,6 +25,7 @@
     scroll-behavior: smooth;
     scrollbar-width: thin;
     scrollbar-color: var(--color-brand) #000;
+    overflow-x: hidden;
   }
 
   body {
@@ -33,7 +34,10 @@
     font-family: var(--font-body);
     overflow-x: hidden;
     -webkit-font-smoothing: antialiased;
+    max-width: 100vw;
   }
+
+  img, video { max-width: 100%; height: auto; }
 
   ::selection {
     background: var(--color-brand);
@@ -44,6 +48,7 @@
   ::-webkit-scrollbar-track { background: #000; }
   ::-webkit-scrollbar-thumb { background: var(--color-brand); border-radius: 3px; }
 }
+
 
 /* --- Preloader --- */
 .preloader {
@@ -549,6 +554,15 @@
   .testimonial-card { min-width:100%; width:100%; padding:28px; }
   .hero { min-height:90vh; }
 
+  /* Hero content: reduce padding on mobile */
+  .hero-content { padding-top: 100px; padding-bottom: 80px; }
+
+  /* Process timeline: stack vertically */
+  .grid.grid-cols-1.md\:grid-cols-\[1fr_64px_1fr\] > div { text-align: left !important; }
+
+  /* Pricing cards: full width */
+  .pricing-card { padding: 32px 24px; }
+
   /* Newsletter outer card: replace the huge p-16 (64px) with breathing room */
   .newsletter-glass-card { padding: 32px 20px !important; }
 
@@ -559,6 +573,18 @@
 
   /* Newsletter "no spam" text: keep on one line */
   .newsletter-glass-card .text-xs { white-space: nowrap; }
+
+  /* Service cards: reduce padding */
+  .service-card { padding: 28px 20px; }
+
+  /* Glass card: reduce padding */
+  .glass-card { border-radius: 12px; }
+
+  /* Section title sizing */
+  .section-title { font-size: clamp(1.7rem, 5vw, 2.4rem); }
+
+  /* Prevent horizontal scroll from floating/absolute elements */
+  section { overflow-x: hidden; }
 }
 @media(max-width:480px) {
   .section-title { font-size:1.8rem; }
@@ -567,12 +593,36 @@
   /* About feature cards: single column so text doesn't word-wrap */
   .about-feature-grid { grid-template-columns: 1fr !important; }
 
+  /* Hero headline */
+  .hero-content h1 { font-size: clamp(2rem, 8vw, 2.8rem) !important; }
+
+  /* Hero subtext */
+  .hero-content p { font-size: 1rem !important; }
+
+  /* Hero CTA row: stack on very small screens */
+  .hero-content .flex.flex-col.sm\:flex-row { flex-direction: column !important; gap: 12px !important; }
+  .hero-content .btn-primary,
+  .hero-content .btn-outline { width: 100%; justify-content: center; }
+
+  /* Hero trust strip: stack items */
+  .hero-content .reveal.flex.flex-wrap { gap: 16px !important; }
+
+  /* Testimonial card: very compact */
+  .testimonial-card { padding: 24px 18px; }
+
   /* Newsletter outer card: even tighter on very small phones */
   .newsletter-glass-card { padding: 24px 16px !important; }
 
   /* Newsletter title: cap size on very small screens */
   .newsletter-title { font-size:1.55rem !important; line-height:1.2; }
+
+  /* Counter values */
+  .counter-value { font-size: 2rem; }
+
+  /* Back to top: move closer to edge */
+  .back-to-top { bottom: 20px; right: 20px; width: 42px; height: 42px; }
 }
+
 
 /* --- Reduced Motion --- */
 @media(prefers-reduced-motion:reduce) {
