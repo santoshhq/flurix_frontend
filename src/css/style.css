@@ -591,6 +591,9 @@
   background: #ffffff;
   border: 1px solid rgba(255,255,255,0.15);
   box-shadow: 0 2px 12px rgba(0,0,0,0.25);
+  width: 72px;
+  border-radius: 12px;
+  padding: 0 8px;
 }
 
 .dm-feature-list {
