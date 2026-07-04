@@ -543,6 +543,162 @@
   box-shadow: 0 24px 60px rgba(181,124,138,0.1);
 }
 
+/* --- Digital Marketing Section --- */
+.dm-platform-card {
+  background: rgba(255,255,255,0.025);
+  border: 1px solid rgba(255,255,255,0.07);
+  border-radius: 24px;
+  padding: 40px 36px;
+  position: relative;
+  overflow: hidden;
+  transition: all 0.4s cubic-bezier(0.4,0,0.2,1);
+}
+.dm-platform-card::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 3px;
+  background: linear-gradient(90deg, transparent, var(--color-brand), transparent);
+  opacity: 0;
+  transition: opacity 0.4s ease;
+}
+.dm-platform-card:hover {
+  background: rgba(255,255,255,0.05);
+  border-color: rgba(181,124,138,0.25);
+  transform: translateY(-6px);
+  box-shadow: 0 28px 80px rgba(181,124,138,0.1);
+}
+.dm-platform-card:hover::before { opacity: 1; }
+
+.dm-platform-header {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  margin-bottom: 20px;
+}
+.dm-platform-icon {
+  width: 58px; height: 58px;
+  border-radius: 14px;
+  display: flex; align-items: center; justify-content: center;
+  flex-shrink: 0;
+}
+.dm-google-icon {
+  background: rgba(66,133,244,0.12);
+  color: #4285F4;
+  border: 1px solid rgba(66,133,244,0.2);
+}
+.dm-meta-icon {
+  background: rgba(24,119,242,0.12);
+  color: #1877F2;
+  border: 1px solid rgba(24,119,242,0.2);
+}
+
+.dm-feature-list {
+  list-style: none;
+  padding: 0; margin: 0 0 28px;
+  display: flex; flex-direction: column; gap: 12px;
+}
+.dm-feature-list li {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  font-size: 0.9rem;
+  color: rgba(255,255,255,0.65);
+}
+.dm-check {
+  color: var(--color-brand);
+  font-weight: 700;
+  font-size: 0.85rem;
+  flex-shrink: 0;
+  margin-top: 1px;
+}
+
+.dm-cta-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  color: var(--color-brand);
+  font-weight: 600;
+  font-size: 0.9rem;
+  text-decoration: none;
+  transition: gap 0.25s ease, opacity 0.25s ease;
+}
+.dm-cta-link:hover { gap: 14px; opacity: 0.85; }
+
+/* DM Process Steps */
+.dm-process-step {
+  background: rgba(255,255,255,0.025);
+  border: 1px solid rgba(255,255,255,0.06);
+  border-radius: 18px;
+  padding: 32px 28px;
+  position: relative;
+  transition: all 0.35s ease;
+}
+.dm-process-step:hover {
+  border-color: rgba(181,124,138,0.25);
+  background: rgba(255,255,255,0.04);
+  transform: translateY(-4px);
+}
+.dm-step-num {
+  font-size: 2.2rem;
+  font-weight: 900;
+  color: rgba(181,124,138,0.18);
+  font-variant-numeric: tabular-nums;
+  line-height: 1;
+  margin-bottom: 14px;
+  font-family: 'Inter', sans-serif;
+}
+
+/* DM CTA Banner */
+.dm-cta-banner {
+  position: relative;
+  background: linear-gradient(135deg, rgba(181,124,138,0.08) 0%, rgba(181,124,138,0.03) 100%);
+  border: 1px solid rgba(181,124,138,0.2);
+  border-radius: 28px;
+  padding: 64px 40px;
+  overflow: hidden;
+  text-align: center;
+}
+.dm-cta-glow {
+  position: absolute;
+  top: 50%; left: 50%;
+  transform: translate(-50%, -50%);
+  width: 500px; height: 300px;
+  background: radial-gradient(ellipse, rgba(181,124,138,0.15) 0%, transparent 70%);
+  pointer-events: none;
+}
+
+/* DM Badges */
+.dm-badge {
+  display: inline-flex;
+  align-items: center;
+  padding: 4px 14px;
+  border-radius: 100px;
+  border: 1px solid rgba(181,124,138,0.3);
+  background: rgba(181,124,138,0.08);
+  color: var(--color-brand);
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+}
+
+/* DM Mobile Responsiveness */
+@media (max-width: 768px) {
+  .dm-platform-card { padding: 28px 22px; }
+  .dm-cta-banner { padding: 40px 24px; }
+  .dm-cta-glow { width: 300px; height: 200px; }
+  .dm-badge { font-size: 0.7rem; padding: 4px 10px; }
+  .dm-process-step { padding: 24px 20px; }
+}
+@media (max-width: 480px) {
+  .dm-platform-card { padding: 22px 18px; }
+  .dm-platform-icon { width: 48px; height: 48px; border-radius: 10px; }
+  .dm-cta-banner { padding: 32px 16px; }
+  .dm-step-num { font-size: 1.8rem; }
+}
+
+
+
 /* --- Responsive --- */
 @media(max-width:1024px) {
   .section { padding:80px 0; }

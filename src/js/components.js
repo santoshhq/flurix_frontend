@@ -53,14 +53,15 @@
                 <div class="fl-dd-icon"><svg fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z"/></svg></div>
                 <div><div class="fl-dd-label">E-Commerce</div><div class="fl-dd-sub">Online stores</div></div>
               </a>
-              <a href="#" class="fl-dd-item">
-                <div class="fl-dd-icon"><svg fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M3 15a4 4 0 004 4h9a5 5 0 10-.1-9.999 5.002 5.002 0 10-9.78 2.096A4.001 4.001 0 003 15z"/></svg></div>
-                <div><div class="fl-dd-label">Cloud</div><div class="fl-dd-sub">AWS · GCP · Azure</div></div>
+              <a href="${root}#digital-marketing" class="fl-dd-item">
+                <div class="fl-dd-icon"><svg fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M11 5.882V19.24a1.76 1.76 0 01-3.417.592l-2.147-6.15M18 13a3 3 0 100-6M5.436 13.683A4.001 4.001 0 017 6h1.832c4.1 0 7.625-1.234 9.168-3v14c-1.543-1.766-5.067-3-9.168-3H7a3.988 3.988 0 01-1.564-.317z"/></svg></div>
+                <div><div class="fl-dd-label">Digital Marketing</div><div class="fl-dd-sub">Google Ads · Meta Ads</div></div>
               </a>
             </div>
           </li>
 
           <li><a href="${root}#our-work">Our Work</a></li>
+          <li><a href="${root}#digital-marketing">Digital Marketing</a></li>
           <li><a href="/careers" ${isCareers ? 'class="active"' : ''}>Careers</a></li>
         </ul>
 
@@ -78,6 +79,7 @@
       <a href="${root}#about">About</a>
       <a href="${root}#services">Services</a>
       <a href="${root}#our-work">Our Work</a>
+      <a href="${root}#digital-marketing">Digital Marketing</a>
       <a href="/careers" ${isCareers ? 'class="active"' : ''}>Careers</a>
       <a href="${root}#contact" class="fl-mob-cta">Contact Us</a>
     </div>`;
